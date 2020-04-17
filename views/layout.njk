@@ -1,0 +1,19 @@
+<html>
+  <head>
+    {% block head%}
+      <title> Academia</title>
+          <link href="/style.css" rel="stylesheet" />
+    {% endblock%}
+  </head>
+  <body>
+  <header>
+    <div class="link">
+      <a href="/" class="active">Membros </a>
+      <a href="/instructors">Instrutor </a>
+    </div>
+  </header>
+  {% block content%}
+
+  {% endblock %}
+  </body>
+</html>

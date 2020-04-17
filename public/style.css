@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+:root{
+  --primeira-cor: #7159c1;
+  --segunda-cor: #f7d71e;
+}
+
+*{
+  margin:0;
+  padding:0;
+  border:none;
+}
+
+body{
+  background-color:  var(--primeira-cor);
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  background-color: white;
+  width: 100%;
+  padding:32px;
+  text-align: center;
+
+}
+
+.link {
+  font-size: 22px;
+}
+
+.link a + a{
+  margin-left: 32px;
+}
+
+.link a{
+  text-decoration: none;
+  color:#777;
+  position: relative;
+}
+
+.link a.active{
+font-weight: bold;
+color:var(--primeira-cor);
+}
+
+.link a:hover{
+  color:var(--primeira-cor);
+}
+
+.link a::after{
+  content:"";
+  width:0;
+  height: auto;
+  background-color: var(--primeira-cor);
+  left:0;
+  bottom: -4px;
+}
+
+.link a:hover::after{
+  width: 100%;
+  transition: width 700ms ease-in-out ;
+}
+
+.card{
+  background-color: white;
+  width: 800px;
+  height: 900px;
+  margin:45px auto;
+
+  display:grid;
+  grid-template-columns:  1fr 1fr;
+  box-shadow: 0px 2px 6px -2px black;
+
+  /*animação*/
+
+  animation-name: up;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-out;
+}
+ 
+@keyframes up {
+  from{
+    opacity: 0;
+    transform:translateY(15px)
+  }to{
+    opacity: 1;
+  }
+}
+
+.detail{
+  padding:32px;
+}
+.detail .item{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 16px;
+}
+.detail .item:last-child{
+  border:none;
+}
+.details h3,
+.detail .item div:nth-child(1){
+  font-size: 14px;
+  line-height: 24px;
+  color:#777;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.detail .item div:nth-child(2){
+  color:#555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.detail h3{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primeira-cor);
+}
+.detail .item div:nth-child(2) span{
+  padding: 8px 16px;
+  background-color:var(--segunda-cor); 
+  border-radius: 16px;
+  color: #777;
+  margin-right: 4px;
+  margin-top:8px;
+  display:inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/*formulario*/
+
+input{
+  width: 100%;
+  outline: none;
+  color:#555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input[type="radio"]{
+  width: initial;
+  margin-right: 4px;
+}
+
+input::placeholder{
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button[type="submit"]{
+  padding: 8px;
+  background-color: var(--segunda-cor);
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%;
+  color:white;
+  font-size: 16px;
+}
