@@ -1,0 +1,29 @@
+ <div class="item">
+    <div>Avatar URL</div>
+   <div> <input type="url" name="avatar_url" value="{{instructor.avatar_url}}"></div>
+  </div>
+
+  <div class="item">
+    <div>Instrutor</div>
+     <div> <input type="text" placeholder="Digite o nome do instrutor" value="{{instructor.name}}" name="name"></div>
+  </div>
+
+   <div class="item">
+    <div>Data de nascimento</div>
+    <div> <input type="date" name="birth" value="{{instructor.birth}}"></div>
+  </div>
+
+   <div class="item">
+    <div>Sexo</div>
+     <div> 
+     <span><input type="radio" name="sexo" value="M" {% if instructor.sexo =='M'%} checked{% endif %}>Masculino </span>
+      <span><input type="radio" name="sexo"  value="F"  {% if instructor.sexo =='F'%} checked{% endif %}>Feminino</span>
+     </div>
+  </div>
+
+   <div class="item">
+    <div>Area de atuação</div>
+   <div> <input type="text"  value="{{instructor.service}}" name="service"></div>
+  </div>
+
+ <button type="Submit">Salvar</button>
